@@ -1,19 +1,17 @@
 "use client";
-
-import Link from "next/link";
-import {AuthLoading, Authenticated, Unauthenticated} from "convex/react";
-import {SignInButton, UserButton} from "@clerk/nextjs";
-
-import {Loading} from "@/components/shared/Loading";
-import MobileMenu from "@/components/MobileMenu";
 import DrawerWithDialog from "@/components/shared/DrawerWithDialog";
-import PlanComboBox from "@/components/plan/PlanComboBox";
-import {navlinks} from "@/lib/constants";
-import {cn} from "@/lib/utils";
-import useAuth from "@/hooks/useAuth";
-import {MapPinIcon} from "lucide-react";
-import {ThemeDropdown} from "@/components/ThemeDropdown";
 import FeedbackSheet from "@/components/common/FeedbackSheet";
+import Link from "next/link";
+import MobileMenu from "@/components/MobileMenu";
+import PlanComboBox from "@/components/plan/PlanComboBox";
+import useAuth from "@/hooks/useAuth";
+import { SignInButton, UserButton } from "@clerk/nextjs";
+import { AuthLoading, Authenticated, Unauthenticated } from "convex/react";
+import { MapPinIcon } from "lucide-react";
+import { ThemeDropdown } from "@/components/ThemeDropdown";
+import { Loading } from "@/components/shared/Loading";
+import { navlinks } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const {isCurrentPathDashboard, isCurrentPathHome, isAuthenticated} = useAuth();
